@@ -107,6 +107,7 @@ def print_stagers_table(stagers: list, server_uri):
     for _stager in stagers:
         _delivery = _stager.delivery.replace('~endpoint~', f'{server_uri}{_stager.endpoint}')
         _stagers_table.add_row(_stager.name, _delivery, style=STATUS)
+        _stagers_table.add_row('','', style=STATUS)
     print(_stagers_table)
 
 
